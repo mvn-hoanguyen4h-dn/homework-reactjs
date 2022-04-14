@@ -1,0 +1,30 @@
+.btn {
+  @include pxRem(padding, 15 20);
+  @include pxRem(border-radius, 28);
+  @include pxRem(font-size, 18);
+  @include pxRem(height, 40);
+  @include pxRem(min-width, 180);
+  background: map-get($colors, primary);
+  color: map-get($colors, white);
+  line-height: 1;
+  cursor: pointer;
+  border: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: capitalize;
+  font-weight: map-get($font-weight, medium);
+  font-size: $font-size-base * 1.1;
+  &:hover{
+    opacity: 0.9;
+  }
+  &:focus{
+    outline: none;
+  }
+}
+.btn-primary{
+  background-color: map-get($colors, primary);
+}
+.btn-second{
+  background-color: map-get($colors,second);
+}

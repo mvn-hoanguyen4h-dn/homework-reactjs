@@ -1,0 +1,668 @@
+// starting
+.starting{
+  @include pxRem(height, 580);
+  @include pxRem(padding, 60px 0);
+  background-color: map-get($colors, heading);
+  &-content{
+    @include flex-between;
+  }
+  &-title{
+    @include pxRem(margin-bottom, 30);
+  }
+  &-left{
+    flex: 1;
+    h1{
+      @include pxRem(font-size, 58);
+      font-weight: map-get($font-weight, medium)
+    }
+    p{
+      @include pxRem(font-size, 20);
+      @include pxRem(line-height, 36);
+      @include pxRem(margin-bottom, 30)
+    }
+  }
+  &-btns{
+    a{
+      @include pxRem(margin-right, 20);
+    }
+  }
+  &-right{
+    @include flex-between;
+    flex: 1;
+    .starting-img{
+      position: relative;
+      &:first-child{
+      @include pxRem(width, 364);
+      @include pxRem(height, 590);
+      @include pxRem(top, 50);
+      @include pxRem(left, 30);
+      }
+      &:last-child{
+      @include pxRem(width, 190);
+      @include pxRem(height, 400);
+      @include pxRem(top, 90);
+      }
+    }
+  }
+}
+
+// services
+.service{
+  @include pxRem(padding, 110 0 115 0);
+  &-list{
+    @include pxRem(margin-top, 80);
+    @include flex-between-center;
+    flex-wrap: wrap;
+  }
+  &-item{
+    @include pxRem(width, 274);
+    &-content{
+      @include border-radius(10px);
+      @include pxRem(padding, 40 10);
+      background-color: map-get($colors, bg-item);
+      text-align: center;
+      &:hover{
+      box-shadow: 0 8px 45px rgba(92, 44, 152, 0.2);
+        p,h3{
+          color: map-get($colors, white);
+        }
+        .service-icon{
+          background-color: map-get($colors,white);
+        }
+      }
+    }
+    .service-icon{
+      @include pxRem(width, 65);
+      @include pxRem(height, 65);
+      @include pxRem(line-height, 65);
+      @include border-radius(15px);
+      @include pxRem(margin-bottom, 40);
+      @include transform-x;
+      text-align: center;;
+      position: relative;
+      i{
+        @include pxRem(font-size, 20)
+      }
+    }
+    &:first-child{
+      .service-item-content:hover{
+        background-color: map-get($colors, second);
+      }
+      .service-icon{
+        background-color: #feeef0;
+        color: map-get($colors, second);
+      }
+    }
+    &:nth-child(2){
+      .service-item-content:hover{
+        background-color: map-get($colors, primary);
+      }
+      .service-icon{
+        background-color: #e8f2f3;
+        color: map-get($colors, primary);
+      }
+    }
+    &:nth-child(3){
+      .service-item-content:hover{
+        background-color: map-get($colors, orange);
+      }
+      .service-icon{
+        background-color: #fdf2ed;
+        color: map-get($colors,orange);
+      }
+    }
+    &:last-child{
+      .service-item-content:hover{
+        background-color: map-get($colors, purple);
+      }
+      .service-icon{
+        background-color: #f6f0fb;
+        color: map-get($colors, purple);
+      }
+    }
+  }
+}
+// about
+.about{
+  background-color: map-get($colors, bg);
+  @include pxRem(padding-top, 120);
+  @include pxRem(height, 790);
+  &-title{
+    @include pxRem(height, 124);
+    @include pxRem(line-height, 62);
+    @include pxRem(width, 620);
+    @include transform-x;
+    position: relative;
+    text-align: center;
+  }
+  &-menu{
+    @include flex-between-center;
+    @include pxRem(height, 480);
+  }
+  &-center{
+    @include transform-x;
+    width: 100%;height: 100%;
+    position: absolute;
+    img{
+      @include pxRem(width, 290);
+      @include pxRem(height, 420);
+      @include pxRem(margin, 0 auto);
+      @include transform-center;
+      z-index: 10;
+      position: relative;
+    }
+    .about-circle{
+      @include transform-center;
+      position: absolute;
+      img{
+        @include pxRem(width, 260);
+        @include pxRem(height, 260);
+        @include transform-x;
+      }
+    }
+  }
+  &-list{
+    @include flex-between-center;
+    flex-direction: column;
+    &:first-child{
+      .about-content{
+        text-align: right;
+      }
+    }
+    &:last-child{
+      .about-content{
+        text-align: left;
+      }
+    }
+  }
+  &-item{
+    display: flex;
+    justify-content: space-evenly;
+    @include pxRem(height, 144);
+    @include pxRem(width, 400);
+    @include pxRem(row-gap, -10);
+    .about-content{
+      @include pxRem(width, 260);
+      p{
+        @include pxRem(height, 60);
+        width: 100%;
+      }
+    }
+    .about-icon{
+      @include pxRem(width, 60);
+      @include pxRem(height, 60);
+      @include pxRem(line-height, 60);
+      @include border-radius(50%);
+      color: map-get($colors, second);
+      background-color: map-get($colors, white);
+      display: inline-block;
+      position: relative;
+      text-align: center;
+      &:hover{
+        color: map-get($colors, white);
+        background-color: map-get($colors, second);
+      }
+    }
+  }
+}
+// group
+.group{
+  @include pxRem(height, 660);
+  @include pxRem(padding-top, 80);
+  background-color: map-get($colors, bg);
+  &-menu{
+  @include pxRem(height, 580);
+  @include flex-between;
+  }
+  &-left{
+    flex: 1.5;
+    h2{
+      @include pxRem(margin-bottom, 20);
+    }
+    p{
+      @include pxRem(font-size, 19);
+      @include pxRem(line-height, 36);
+    }
+    .group-contents{
+      @include pxRem(margin-bottom, 40);
+      @include flex-between-center;
+    }
+    .group-content{
+      @include pxRem(width, 290);
+      @include pxRem(margin-top, 60);
+      p{
+      @include pxRem(font-size, 18);
+      }
+    }
+    .group-icon{
+      @include pxRem(width, 50);
+      @include pxRem(height, 50);
+      @include pxRem(line-height, 50);
+      @include pxRem(margin-bottom, 32);
+      @include border-radius(50%);
+      text-align: center;
+      background-color: map-get($colors, primary);
+      color: map-get($colors, white);
+      box-shadow: 0 4px 4px 0 map-get($colors, primary);
+    }
+  }
+  &-right{
+  flex: 1;
+  position: relative;
+    img{
+    @include pxRem(width, 380);
+    @include pxRem(height, 580);
+    @include transform-center;
+    position: absolute;
+    z-index: 10;
+    }
+    .group-circle{
+    @include pxRem(width, 360);
+    @include pxRem(height, 360);
+    @include transform-center;
+    position: absolute;
+      img{
+      @include pxRem(width, 100%);
+      @include pxRem(height, 100%);
+      }
+    }
+  }
+}
+// pricing
+.pricing{
+  @include pxRem(padding, 120 0 10 0);
+  background-color: map-get($colors, bg);
+  &-time{
+    @include pxRem(height, 40);
+    @include pxRem(line-height, 40);
+    @include flex-center;
+    span{
+      @include pxRem(font-size, 18);
+      @include pxRem(font-weight, 500);
+      @include pxRem(margin, 0 8);
+      &:nth-child(2){
+        @include pxRem(width, 60);
+        @include pxRem(height, 30);
+        @include pxRem(line-height, 30);
+        @include border-radius(20px);
+        position: relative;
+      }
+      &:last-child{
+        @include pxRem(padding, 0 20);
+        @include border-radius(30px);
+        @include pxRem(font-size, 15);
+        font-weight: map-get($font-weight, medium);
+        background-color: rgb(131, 196, 195);
+      }
+      input{
+        @include pxRem(height, 25);
+        @include pxRem(width, 25);
+        @include pxRem(right, 3);
+        @include transform-y;
+        position: absolute;
+        border-color: map-get($colors, white);
+        outline: none;
+        background-color: map-get($colors, white);
+      }
+    }
+  }
+  &-list{
+    @include pxRem(margin, 80 0 120 0);
+    @include flex-between-center;
+  }
+  &-item{
+    &:hover{
+      .pricing-item-content{
+        @include pxRem(box-shadow, 0 20 40 rgba(94, 92, 92, 0.8));
+      @include border-radius(15px);
+      }
+    }
+    &:first-child,
+    &:last-child{
+      .pricing-top{
+        background-color: map-get($colors, primary);
+      }
+      .pricing-content-item{
+        i{
+          color: map-get($colors, primary);
+        }
+      }
+      a{
+        @include pxRem(box-shadow, 0 4 10 map-get($colors,primary));
+      }
+    }
+    &:nth-child(2){
+      .pricing-top{
+        background-color: map-get($colors, second);
+      }
+      .pricing-content-item{
+        i{
+          color: map-get($colors, second);
+        }
+      }
+      a{
+        @include pxRem(box-shadow, 0 4 10 map-get($colors,second))
+      }
+    }
+  }
+  &-item-content{
+    @include pxRem(width,360);
+  }
+  &-top{
+    @include pxRem(height, 250);
+    @include pxRem(border-top-left-radius, 15);
+    @include pxRem(border-top-right-radius, 15);
+    position: relative;
+    color: map-get($colors, white);
+    text-align: center;
+  }
+  &-info{
+    @include pxRem(height, 125);
+    @include pxRem(padding, 30 0);
+
+  }
+  &-title{
+    @include pxRem(font-size, 26);
+    @include pxRem(font-weight, 500);
+  }
+  &-description{
+    @include pxRem(font-size, 20);
+    @include pxRem(margin-top, 15);
+    color: map-get($colors, txt-light);
+  }
+  &-line{
+    @include pxRem(height, 1);
+    position: absolute;
+    width: 100%;
+    background-color: map-get($colors, bg-item);
+  }
+  &-currency{
+    @include pxRem(font-size, 18);
+    @include pxRem(top, -25);
+    font-weight: map-get($font-weight, bold);
+    position: relative;
+  }
+  &-price{
+    @include pxRem(font-size, 70);
+    font-weight: map-get($font-weight, medium);
+    text-align: center;
+  }
+  &-month{
+    font-weight: map-get($font-weight, medium);
+  }
+  &-content{
+    @include pxRem(border-bottom-left-radius, 15);
+    @include pxRem(border-bottom-right-radius, 15);
+    background-color: map-get($colors, white);
+    &-list{
+      @include pxRem(padding, 45 30 20 50);
+    }
+    &-item{
+      @include pxRem(font-size, 19);
+      @include pxRem(margin-bottom, 20);
+      @include pxRem(line-height, 30);
+      color: map-get($colors, txt-gray);
+      i{
+        @include pxRem(font-size, 24);
+        @include pxRem(margin-right, 24);
+        font-weight: map-get($font-weight, bold);
+      }
+    }
+    a{
+      @include transform-x;
+      @include pxRem(margin-bottom, 45);
+      position: relative;
+      &:hover{
+        @include pxRem(top, -5);
+      }
+    }
+  }
+}
+// testimonial
+.testimonial{
+  @include pxRem(padding, 35 0 150 0);
+  background-color: map-get($colors, bg);
+  &-heading{
+    @include flex-between-center;
+  }
+  &-btn{
+    @include pxRem(width, 50);
+    @include pxRem(height, 50);
+    @include border-radius(50%);
+    background-color: map-get($colors, white);
+    color: map-get($colors, primary);
+    border: none;
+    cursor: pointer;
+    &:first-child{
+      @include pxRem(left, -20);
+      position: relative;
+    }
+    &:hover{
+      @include pxRem(box-shadow, 0 4 4 map-get($colors, primary));
+      color: map-get($colors, white);
+      background-color: map-get($colors, primary);
+    }
+    i{
+      @include pxRem(font-size, 20);
+      font-weight: map-get($font-weight, bold);
+    }
+  }
+  &-list{
+    @include pxRem(margin-top, 60);
+    @include flex-between;
+    flex: wrap;
+  }
+  &-item{
+    @include pxRem(width, 360);
+    &-content{
+      @include border-radius(15px);
+      @include pxRem(padding, 45);
+      @include pxRem(height, 275);
+      background-color: map-get($colors, white);
+      p{
+      @include pxRem(line-height, 28);
+      @include pxRem(margin-top, 20);
+      color: map-get($colors, black);
+      }
+      &:hover{
+        background-color: #5034fc;
+        h6,p{
+          color: map-get($colors, white);
+        }
+        .testimonial-item-top-icon{
+          color: map-get($colors, white);
+        }
+      }
+    }
+    &-top{
+      @include flex-between-center;
+      &-info{
+      @include flex-between-center;
+      }
+      &-icon{
+      @include pxRem(font-size, 58);
+      color: map-get($colors, primary);
+      }
+    }
+    &-img{
+      @include pxRem(width, 50);
+      @include pxRem(height, 50);
+    }
+    &-description{
+      @include pxRem(width, 150);
+      @include pxRem(padding-left, 10);
+      h6{
+      @include pxRem(font-size, 15);
+      @include pxRem(font-weight, 500);
+      @include pxRem(margin-top, 20)
+      }
+      p{
+      @include pxRem(font-size, 12);
+      @include pxRem(font-weight, 500);
+      @include pxRem(margin-top, 0);
+      color: map-get($colors, black);
+      }
+    }
+  }
+}
+// community
+.community{
+  @include pxRem(padding, 130 0);
+  @include pxRem(height, 800);
+  background-image: linear-gradient(300deg, #099a97 0%, #099a97 33%, #20aa8e 53%, #20aa8e 53%, #82c4c3 100%);
+  position: relative;
+  &-img{
+    img{
+      @include pxRem(width, 700);
+      @include pxRem(height, 760);
+      @include pxRem(top, -90);
+    position: relative;
+    }
+  }
+  &-info{
+    @include pxRem(width, 640);
+    @include border-radius(30px);
+    @include pxRem(padding, 60);
+    @include pxRem(right, 200);
+    @include transform-y;
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.87) 0%,
+    rgba(255, 255, 255, 0.62) 29%,
+    rgba(255, 255, 255, 0.2) 100%
+  );
+  position: absolute;
+    h6{
+      @include pxRem(font-size, 18);
+      @include pxRem(margin-bottom, 30);
+    }
+  }
+  &-form{
+    @include pxRem(max-width, 480);
+    @include border-radius(60px);
+    @include pxRem(padding, 20 0);
+    position: relative;
+    background-color: rgb(192, 226, 222);
+    input{
+    @include pxRem(font-size, 20);
+    @include pxRem(padding-left, 20);
+    width: 100%;
+    position: relative;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    color: rgba(37, 55, 63, 0.7);
+    }
+    button{
+      @include pxRem(right, 5);
+      @include transform-y;
+      position: absolute;
+    }
+  }
+}
+// app
+.app{
+  @include pxRem(padding, 110 0);
+  h2{
+    @include pxRem(width, 770);
+    @include pxRem(margin-bottom, -20);
+    @include transform-center;
+    position: relative;
+  }
+  p{
+    text-align: center;
+    @include pxRem(font-size, 20);
+  }
+  &-btns{
+    @include pxRem(margin-top, 40);
+    @include flex-center;
+    text-align: center;
+  }
+  &-link{
+    @include flex-center;
+    @include pxRem(margin, 0 10);
+    text-align: center;
+    i{
+    @include pxRem(margin-right, 10);
+    @include pxRem(font-size, 22);
+    }
+    &:first-child{
+      box-shadow: 4px 2px 10px map-get($colors, second);
+    }
+    &:last-child{
+      box-shadow: 4px 2px 10px map-get($colors, primary);
+    }
+  }
+}
+// responsive
+@include respond-below(large){
+  .starting{
+    @include pxRem(height, 1020);
+    &-content{
+    @include pxRem(height,1400);
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    position: relative;
+    }
+    &-title{
+      @include pxRem(font-size, 52px);
+    }
+    &-right{
+      @include pxRem(margin, -100 0 0 -80);
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    &-img{
+      &:first-child{
+        @include pxRem(width, 420);
+        @include pxRem(height, 620);
+        @include pxRem(top, 120);
+      }
+      &:last-child{
+          @include pxRem(width, 220);
+          @include pxRem(height, 460);
+          @include pxRem(top, 180);
+          @include pxRem(margin-left, 30);
+      }
+    }
+    &-left{
+      @include pxRem(top, -100);
+      position: relative;
+    }
+  }
+  .service{
+    &-item{
+      &:first-child,
+      &:nth-child(2){
+        @include pxRem(margin-bottom, 30)
+      }
+    }
+  }
+  .about{
+    @include pxRem(height, 1340);
+    &-center img{
+        @include pxRem(width, 370);
+        @include pxRem(height, 540);
+      }
+    &-circle img{
+      @include pxRem(width, 330);
+      @include pxRem(height, 330);
+    }
+    &-list{
+      @include pxRem(margin-top, 960);
+      :first-child{
+        @include pxRem(margin-left, 25)
+      }
+      :last-child{
+        @include pxRem(margin-right, 25)
+      }
+    }
+    &-content{
+      @include pxRem(width, 205);
+    }
+    &-item{
+      @include pxRem(width, 340);
+    }
+  }
+}

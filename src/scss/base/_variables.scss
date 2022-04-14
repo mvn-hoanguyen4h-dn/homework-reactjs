@@ -1,0 +1,45 @@
+// === Font === //
+$font-body: 'Rubik', sans-serif;
+
+// === Font Weight === //
+$font-weight: (
+  normal: 400,
+  medium: 600,
+  bold: 700
+);
+// == Breakpoints === //
+$breakpoints: (
+  small: 480px,
+  medium: 768px,
+  wide: 960px,
+  large: 1024px,
+  largest: 1280px
+);
+// === Colors === //
+$colors: (
+  primary: #079a97,
+  second: #ff7272,
+  orange: #ff8d53,
+  purple: #be79df,
+  black: #000,
+  white: #fff,
+  txt-gray: rgb(108, 118, 116),
+  bg: rgb(242, 245, 251),
+  bg-item: rgba(242, 245, 251, 0.2),
+  heading: #d4f2eb,
+  txt-light: #ccc,
+);
+
+// === Typography === //
+$font-size-base: 0.875rem !default; // 14px
+$font-size-lg: $font-size-base * 1.25 !default;
+$font-size-sm: $font-size-base * .875 !default;
+
+$h-font-size: (
+  h1: $font-size-base * 2.5,
+  h2: $font-size-base * 2,
+  h3: $font-size-base * 1.75,
+  h4: $font-size-base * 1.5,
+  h5: $font-size-base * 1.25,
+  h6: $font-size-base,
+);

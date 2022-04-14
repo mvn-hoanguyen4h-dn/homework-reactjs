@@ -27,8 +27,8 @@ const Header = () => {
                 <a href="/">Contact<i className="fa-solid fa-angle-down" /></a>
               </li>
             </ul>
-            <div className="btn header-btn">
-              <a href="/" className="btn-primary"> Free SEO Analysis</a>
+            <div className="header-btn">
+              <a href="/" className="btn btn-primary"> Free SEO Analysis</a>
             </div>
             <div className="header-bars">
               <i className="fa-solid fa-bars" />

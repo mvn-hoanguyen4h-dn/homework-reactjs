@@ -24,7 +24,7 @@ const Main = () => {
           </div>
         </div>
       </section>
-      <section className="services">
+      <section className="service">
         <div className="container">
           <h6 className="section-description text-center">Our Services</h6>
           <h2 className="section-title text-center">Provided Features</h2>

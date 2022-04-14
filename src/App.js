@@ -1,37 +1,34 @@
-import ReactDOM from 'react-dom';
 import './App.css';
 
 function App() {
-  const root = ReactDOM.createRoot(document.getElementById("root"))
-
-  const fastLand = (
-    <>
+  return (
+    <div className="App">
       <header className="page-header">
         <div className="container">
           <div className="header-content">
-            <a href className="brand-image">
-              <img src="https://finestdevs.com/demos/fastland-html/image/png/logo-dark.png" alt="brand-image" />
+            <a href="/" className="brand-image">
+              <img src="./logo-dark.png" alt="brand-image" />
             </a>
             <div className="header-nav">
               <ul className="header-list">
                 <li className="header-item">
-                  <a href className>Home<i className="fa-solid fa-angle-down" /></a>
+                  <a href="/">Home<i className="fa-solid fa-angle-down" /></a>
                 </li>
                 <li className="header-item">
-                  <a href className>Pages<i className="fa-solid fa-angle-down" /></a>
+                  <a href="/">Pages<i className="fa-solid fa-angle-down" /></a>
                 </li>
                 <li className="header-item">
-                  <a href className>Portfolios<i className="fa-solid fa-angle-down" /></a>
+                  <a href="/">Portfolios<i className="fa-solid fa-angle-down" /></a>
                 </li>
                 <li className="header-item">
-                  <a href className>Blogs<i className="fa-solid fa-angle-down" /></a>
+                  <a href="/">Blogs<i className="fa-solid fa-angle-down" /></a>
                 </li>
                 <li className="header-item">
-                  <a href className>Contact<i className="fa-solid fa-angle-down" /></a>
+                  <a href="/">Contact<i className="fa-solid fa-angle-down" /></a>
                 </li>
               </ul>
               <div className="header-btn">
-                <a href className="btn-primary"> Free SEO Analysis</a>
+                <a href="/" className="btn-primary"> Free SEO Analysis</a>
               </div>
               <div className="header-bars">
                 <i className="fa-solid fa-bars" />
@@ -51,8 +48,8 @@ function App() {
                 <p>When, while lovely valley teems with vapour around meand
                   meridian sun strikes the upper impenetroble.</p>
                 <div className="starting-btns">
-                  <a href className="btn btn-second starting-btn">watch video</a>
-                  <a href className="btn btn-primary starting-btn">get started</a>
+                  <a href="/" className="btn btn-second starting-btn">watch video</a>
+                  <a href="/" className="btn btn-primary starting-btn">get started</a>
                 </div>
               </div>
               <div className="starting-right">
@@ -231,7 +228,7 @@ function App() {
             <h2 className="section-title text-center">Live Chat 24/7 Support</h2>
             <div className="pricing-time">
               <span>Monthly</span>
-              <span><input type="radio" name id /></span>
+              <span><input type="radio" /></span>
               <span>Yearly</span>
               <span className="pricing-discount">SAVE 20%</span>
             </div>
@@ -269,7 +266,7 @@ function App() {
                         Custom designs &amp; features
                       </li>
                     </ul>
-                    <a href className="btn btn-primary">choose plan</a>
+                    <a href="/" className="btn btn-primary">choose plan</a>
                   </div>
                 </div>
               </li>
@@ -306,7 +303,7 @@ function App() {
                         Custom designs &amp; features
                       </li>
                     </ul>
-                    <a href className="btn btn-second">choose plan</a>
+                    <a href="/" className="btn btn-second">choose plan</a>
                   </div>
                 </div>
               </li>
@@ -343,7 +340,7 @@ function App() {
                         Custom designs &amp; features
                       </li>
                     </ul>
-                    <a href className="btn btn-primary">choose plan</a>
+                    <a href="/" className="btn btn-primary">choose plan</a>
                   </div>
                 </div>
               </li>
@@ -372,7 +369,7 @@ function App() {
                 <div className="testimonial-item-content">
                   <div className="testimonial-item-top">
                     <div className="testimonial-item-top-info">
-                      <img src="https://finestdevs.com/demos/fastland-html/image/home-4/user-img-1.png" alt className="testimonial-item-img" />
+                      <img src="https://finestdevs.com/demos/fastland-html/image/home-4/user-img-1.png" className="testimonial-item-img" />
                       <div className="testimonial-item-description">
                         <h6>Charles Patterson</h6>
                         <p>One year with us</p>
@@ -391,7 +388,7 @@ function App() {
                 <div className="testimonial-item-content">
                   <div className="testimonial-item-top">
                     <div className="testimonial-item-top-info">
-                      <img src="https://finestdevs.com/demos/fastland-html/image/home-3/user-circle-1.png" alt className="testimonial-item-img" />
+                      <img src="https://finestdevs.com/demos/fastland-html/image/home-3/user-circle-1.png" className="testimonial-item-img" />
                       <div className="testimonial-item-description">
                         <h6>John Doe</h6>
                         <p>One year with us</p>
@@ -410,7 +407,7 @@ function App() {
                 <div className="testimonial-item-content">
                   <div className="testimonial-item-top">
                     <div className="testimonial-item-top-info">
-                      <img src="https://finestdevs.com/demos/fastland-html/image/home-3/user-circle-2.png" alt className="testimonial-item-img" />
+                      <img src="https://finestdevs.com/demos/fastland-html/image/home-3/user-circle-2.png" className="testimonial-item-img" />
                       <div className="testimonial-item-description">
                         <h6>Tiana Dokidis</h6>
                         <p>One year with us</p>
@@ -438,7 +435,7 @@ function App() {
                 <h6 className="community-description">Join our community</h6>
                 <h2 className="section-title community-title">Get latest app updates right at your inbox</h2>
                 <form className="community-form">
-                  <input type="email" name id placeholder="Enter your email" />
+                  <input type="email" placeholder="Enter your email" />
                   <button className="btn btn-primary">Subscribe</button>
                 </form>
               </div>
@@ -450,11 +447,11 @@ function App() {
             <h2 className="section-title">App Is Available For Free On Google Play &amp; App Store</h2>
             <p>We’ll help you achieve your marketing &amp; business goals</p>
             <div className="app-btns">
-              <a href className="app-link btn btn-second">
+              <a href="/" className="app-link btn btn-second">
                 <i className="fa-brands fa-apple" />
                 App Store
               </a>
-              <a href className="app-link btn btn-primary">
+              <a href="/" className="app-link btn btn-primary">
                 <i className="fa-brands fa-google-play" />
                 Google Play
               </a>
@@ -468,10 +465,10 @@ function App() {
               <img src="https://finestdevs.com/demos/fastland-html/image/png/logo-dark.png" alt="brand-image" />
             </div>
             <ul className="footer-nav">
-              <li><a href className="nav-link">Home</a></li>
-              <li><a href className="nav-link">About Us</a></li>
-              <li><a href className="nav-link">Blog</a></li>
-              <li><a href className="nav-link">Contacts</a></li>
+              <li><a href="/" className="nav-link">Home</a></li>
+              <li><a href="/" className="nav-link">About Us</a></li>
+              <li><a href="/" className="nav-link">Blog</a></li>
+              <li><a href="/" className="nav-link">Contacts</a></li>
             </ul>
           </div>
           <div className="footer-line" />
@@ -479,24 +476,23 @@ function App() {
             <p className="footer-copyright">© 2021 Fastland Web Ui Template</p>
             <ul className="footer-social-list">
               <li className="footer-social-item">
-                <a href className="footer-social-link"><i className="fa-brands fa-facebook" /></a>
+                <a href="/" className="footer-social-link"><i className="fa-brands fa-facebook" /></a>
               </li>
               <li className="footer-social-item">
-                <a href className="footer-social-link"><i className="fa-brands fa-twitter" /></a>
+                <a href="/" className="footer-social-link"><i className="fa-brands fa-twitter" /></a>
               </li>
               <li className="footer-social-item">
-                <a href className="footer-social-link"><i className="fa-brands fa-instagram" /></a>
+                <a href="/" className="footer-social-link"><i className="fa-brands fa-instagram" /></a>
               </li>
               <li className="footer-social-item">
-                <a href className="footer-social-link"><i className="fa-brands fa-linkedin" /></a>
+                <a href="/" className="footer-social-link"><i className="fa-brands fa-linkedin" /></a>
               </li>
             </ul>
           </div>
         </div>
       </footer>
-    </>
+    </div>
   )
-  root.render(fastLand)
 }
 
 export default App;

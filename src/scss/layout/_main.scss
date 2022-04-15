@@ -1,0 +1,11 @@
+.container{
+  @include pxRem(max-width, 1200);
+  @include pxRem(margin, 0 auto);
+  @include pxRem(padding, 0 15);
+}
+
+@include respond-below(large){
+  .container{
+    @include pxRem(max-width, 760);
+  }
+}

@@ -1,0 +1,49 @@
+.page-footer{
+  @include pxRem(padding-top, 40);
+  @include pxRem(height, 176);
+  .footer-top{
+    @include pxRem(height, 100);
+    @include flex-between-center;
+  }
+  .footer-line{
+  @include pxRem(height, 1);
+  position: absolute;
+  width: 100%;
+  background-color: map-get($colors, txt-light);
+  }
+  .footer-nav{
+    @include flex-between-center;
+    li{
+      @include pxRem(margin, 0 25);
+      display: inline-block;
+      a{
+      @include pxRem(font-size, 16);
+      @include pxRem(font-weight, 500);
+      color: #677279;
+      &:hover{
+        color: map-get($colors, second);
+        }
+      }
+    }
+  }
+  .footer-bottom{
+    @include pxRem(height, 120);
+    @include flex-between-center;
+  }
+  .footer-social-list{
+    @include flex-between-center;
+  }
+  .footer-social-item{
+    @include pxRem(margin, 0 20);
+  }
+  .footer-social-link{
+    i{
+      &:hover{
+        color: map-get($colors, second);
+      }
+    }
+  }
+  .footer-copy-right{
+    @include pxRem(font-size, 14);
+  }
+}

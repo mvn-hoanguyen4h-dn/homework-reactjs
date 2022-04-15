@@ -1,0 +1,26 @@
+.is-hidden {
+  display: none;
+}
+.text-center{
+  text-align: center;
+}
+.section-description{
+  @include pxRem(font-size, 20);
+  @include pxRem(margin-bottom, 15);
+  @include pxRem(font-weight, 500);
+  color: map-get($colors, second);
+}
+.content-title {
+  @include pxRem(margin-bottom, 15);
+  @include pxRem(font-size, 21);
+  @include pxRem(font-weight, 500);
+}
+.section-title{
+  @include pxRem(font-size, 46);
+  @include pxRem(margin-bottom, 20);
+  @include pxRem(font-weight, 500);
+}
+// resonsive
+// @include respond-below(large){
+  
+// }

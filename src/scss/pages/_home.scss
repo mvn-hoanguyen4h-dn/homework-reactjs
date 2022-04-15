@@ -568,6 +568,7 @@
     @include pxRem(margin-bottom, -20);
     @include transform-center;
     position: relative;
+    text-align: center;
   }
   p{
     text-align: center;

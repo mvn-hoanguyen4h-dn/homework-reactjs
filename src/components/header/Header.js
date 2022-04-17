@@ -1,43 +1,33 @@
-import React from 'react'
+import React, { Component } from 'react'
 import logo from '../../assets/images/logo-dark.png'
+import BrandImage from '../props/BrandImage'
+import HeaderItem from '../props/HeaderItem'
 
-const Header = () => {
-  return (
-    <header className="page-header">
-      <div className="container">
-        <div className="header-content">
-          <a href="/" className="brand-image">
-            <img src={logo} alt="brand-image" />
-          </a>
-          <div className="header-nav">
-            <ul className="header-list">
-              <li className="header-item">
-                <a href="/">Home<i className="fa-solid fa-angle-down" /></a>
-              </li>
-              <li className="header-item">
-                <a href="/">Pages<i className="fa-solid fa-angle-down" /></a>
-              </li>
-              <li className="header-item">
-                <a href="/">Portfolios<i className="fa-solid fa-angle-down" /></a>
-              </li>
-              <li className="header-item">
-                <a href="/">Blogs<i className="fa-solid fa-angle-down" /></a>
-              </li>
-              <li className="header-item">
-                <a href="/">Contact<i className="fa-solid fa-angle-down" /></a>
-              </li>
-            </ul>
-            <div className="header-btn">
-              <a href="/" className="btn btn-primary"> Free SEO Analysis</a>
-            </div>
-            <div className="header-bars">
-              <i className="fa-solid fa-bars" />
+export default class Header extends Component {
+  render() {
+    return (
+      <header className="page-header">
+        <div className="container">
+          <div className="header-content">
+            <BrandImage />
+            <div className="header-nav">
+              <ul className="header-list">
+                <HeaderItem item="Home" />
+                <HeaderItem item="Pages" />
+                <HeaderItem item="Porfolios" />
+                <HeaderItem item="Blogs" />
+                <HeaderItem item="Contact" />
+              </ul>
+              <div className="header-btn">
+                <a href="/" className="btn btn-primary"> Free SEO Analysis</a>
+              </div>
+              <div className="header-bars">
+                <i className="fa-solid fa-bars" />
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </header>
-  )
+      </header>
+    )
+  }
 }
-
-export default Header

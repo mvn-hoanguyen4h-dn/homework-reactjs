@@ -14,7 +14,6 @@ export default class App extends Component {
 
   handleMovePage(event, pageName) {
     event.preventDefault()
-    console.log(pageName)
     this.setState({ isActive: pageName })
   }
 
@@ -26,7 +25,8 @@ export default class App extends Component {
           <li><a href="https://www.google.com/" onClick={(event) => this.handleMovePage(event, "About")}>About</a></li>
         </ul>
         <div className="content">
-          {this.state.isActive === "Home" ? <Home /> : <About />}
+          {this.state.isActive === "Home" && <Home />}
+          {this.state.isActive === "About" && <About />}
         </div>
       </div>
     )

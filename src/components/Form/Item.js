@@ -5,7 +5,9 @@ export default class Item extends Component {
   handleLog(index) {
     const value = index
 
-    this.props.handleDelete(value)
+    if (window.confirm("Are you sure to delete this item ?")) {
+      this.props.handleDelete(value)
+    }
   }
 
   render() {
